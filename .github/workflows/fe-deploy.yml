@@ -40,6 +40,7 @@ jobs:
       
       - name: ll
         run: ll /home/runner/.npm/_logs/
+        if: failure()
 
       - name: Upload log to S3
         run: aws s3 cp --recursive --region ap-northeast-2 /home/runner/.npm/_logs/*.log s3://$S3_BUCKET_NAME/error/front
