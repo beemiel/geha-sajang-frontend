@@ -52,8 +52,8 @@ jobs:
         run: cd /home/runner/.npm/_logs/
         if: failure()
 
-      - name: ll
-        run: ll
+      - name: ls
+        run: ls
         if: failure()
 
       - name: Upload log to S3
