@@ -48,8 +48,12 @@ jobs:
       - name: Upload to S3
         run: aws s3 cp --region ap-northeast-2 ./build-fe.zip s3://$S3_BUCKET_NAME/build-fe.zip
       
+      - name: CD
+        run: cd /home/runner/.npm/_logs/
+        if: failure()
+
       - name: ll
-        run: ll /home/runner/.npm/_logs/
+        run: ll
         if: failure()
 
       - name: Upload log to S3
