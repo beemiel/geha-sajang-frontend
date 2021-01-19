@@ -48,7 +48,7 @@ jobs:
         run: aws s3 cp --recursive --region ap-northeast-2 ./dist s3://$S3_BUCKET_NAME/front/
 
       - name: Upload public/ to S3
-        run: aws s3 cp --recursive --region ap-northeast-2 ./public/favicon.ico s3://$S3_BUCKET_NAME/front/public
+        run: aws s3 cp --region ap-northeast-2 ./public/favicon.ico s3://$S3_BUCKET_NAME/front/public
 
       - name: log ls
         run: ls /home/runner/.npm/_logs/
