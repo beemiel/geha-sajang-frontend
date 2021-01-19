@@ -47,6 +47,9 @@ jobs:
       - name: Upload dist/ to S3
         run: aws s3 cp --recursive --region ap-northeast-2 ./dist s3://$S3_BUCKET_NAME/front/
 
+      - name: print ls ./
+        run: ls ./
+
       - name: Upload public/ to S3
         run: aws s3 cp --region ap-northeast-2 ./public/favicon.ico s3://$S3_BUCKET_NAME/front/public
 
