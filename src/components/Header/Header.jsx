@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 
-import logo from '@/img/Logo/logo.png';
+import logo from '@/img/logo/logo.png';
 import downArrow from '@/img/icon/down-arrow.png';
 
 import { getCookie, deleteCookie } from '@/common/lib/util/cookies';
