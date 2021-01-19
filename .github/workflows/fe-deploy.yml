@@ -35,6 +35,9 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-build-
             ${{ runner.OS }}-
+            
+      - name: Pring node veresion
+        run: node --version
 
       - name: Install Dependencies
         run: npm install
